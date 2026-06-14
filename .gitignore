@@ -1,0 +1,21 @@
+# --- 비밀정보 / 환경별 (절대 커밋 금지) ---
+firmware/src/config.h        # WiFi SSID/비밀번호 포함
+**/config.h
+
+# --- 빌드 산출물 ---
+firmware/.pio/
+.pio/
+.pio-venv/
+
+# --- Node ---
+server/node_modules/
+**/node_modules/
+
+# --- 로그 / 런타임 ---
+*.log
+server/server.log
+server/server.err.log
+
+# --- 로컬 설정 / OS ---
+.claude/
+.DS_Store

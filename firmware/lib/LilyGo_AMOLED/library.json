@@ -1,0 +1,11 @@
+{
+  "name": "LilyGo_AMOLED",
+  "version": "1.0.0-local",
+  "description": "LilyGo T-Display AMOLED 패널 드라이버 (LVGL/TFT_eSPI 예제 의존성 제거한 로컬 사본)",
+  "dependencies": {
+    "lewisxhe/XPowersLib": "0.2.7",
+    "lewisxhe/SensorLib": "0.2.4"
+  },
+  "frameworks": "arduino",
+  "platforms": "espressif32"
+}

@@ -1,0 +1,13 @@
+{
+  "name": "claude-usage-server",
+  "version": "1.0.0",
+  "description": "Claude Code 사용량을 ESP32 미터기용 JSON으로 내보내는 헬퍼 서버",
+  "main": "usage-server.js",
+  "scripts": {
+    "start": "node usage-server.js"
+  },
+  "dependencies": {
+    "ccusage": "^15.0.0"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- launchd 템플릿: 아래 경로/node 버전을 본인 환경에 맞게 바꾼 뒤
+     ~/Library/LaunchAgents/com.claude-meter.plist 로 복사하고
+     launchctl load 하면 로그인 시 자동 실행됩니다. -->
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.claude-meter</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/PATH/TO/node</string>            <!-- 예: ~/.nvm/versions/node/v24.x/bin/node -->
+        <string>/PATH/TO/mini-display/server/usage-server.js</string>
+    </array>
+    <key>WorkingDirectory</key>
+    <string>/PATH/TO/mini-display/server</string>
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PORT</key><string>8722</string>
+        <key>BUDGET_TOKENS</key><string>10000000</string>
+    </dict>
+    <key>RunAtLoad</key><true/>
+    <key>KeepAlive</key><true/>
+    <key>StandardOutPath</key><string>/PATH/TO/mini-display/server/server.log</string>
+    <key>StandardErrorPath</key><string>/PATH/TO/mini-display/server/server.err.log</string>
+</dict>
+</plist>
